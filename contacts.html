@@ -1,0 +1,216 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="title" content="Swelihle Memela" />
+<meta name="description" content="Potter" />
+<link rel="image_src" href="images/m2.jpg" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Contacts</title>
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+<link rel="shortcut icon" href="images/phone_icon.ico"/>
+<link rel="icon" type="image/ico" href="images/phone_icon.ico"/>
+    <style type="text/css">
+        #content2 {
+	     width: 100%;
+	     padding: 0px 0px 0px 0px;
+         }
+        .style2
+        {
+            width: 57px;
+        }
+        .style3
+        {
+            width: 53px;
+        }
+		.hover {
+			position:absolute;
+			border:10px solid #C0F;
+			border-radius: 4px;
+			padding:30px;
+			background:#fff;
+			overflow:hidden;
+		}
+		.hover > .text {
+			margin:0px;
+			padding:0px;
+			font-size:100px;
+			width:100%;
+			height:100%;
+		}
+    </style>
+<script>
+function show(el, _id) {
+	document.getElementById("overlay").style.display = "block";
+	var id = document.getElementById(_id);
+	id.style.display = "block";	
+}
+
+function closeoverlay() {
+	document.getElementById("overlay").style.display = "none";
+	var opened = document.getElementsByClassName("hover");
+	for(var i = 0; i < opened.length; i++) {
+		opened.item(i).style.transition = "opacity 1.0s linear 0s";
+		opened.item(i).style.transition = 0;
+		opened.item(i).style.display = "none";
+	}
+	
+}
+</script>    
+</head>
+<body>
+<div onclick="closeoverlay()" id="overlay"></div>
+
+<div id="wrapper">
+	<div id="page">
+		<div id="page-bgtop">
+			<div id="page-bgbtm">
+				<div id="page-content">
+					<div id="content">
+                     <div id="menu-wrapper">
+						<div id="menu">
+							<ul>
+								<li><a href="index.html">Homepage</a></li>
+                                <li><a href="Entertainment/Entertainment.html">Entertainment</a></li>
+								<li class="current_page_item"><a href="contacts.html">Contacts</a></li>
+							</ul>
+						</div>
+					</div>
+                    <div style="clear: both;">&nbsp;</div>
+                    <div >
+                    <table id="contacts_table" cellpadding ="0" cellspacing ="0">
+                       <tr>
+                       <td valign ="top" >
+                       <!--Phones-->
+                        <div id="sidebar">
+						<ul>
+							<li>
+                                <table  border ="0">
+                                <tr>
+                                 <td colspan ="2" style ="font-size:large; z-index :2" size="30px">
+                                  <h1>Phones</h1>
+                                 </td>
+                                </tr>
+                                 <tr>
+                                  <td class="style2" >
+                                   <img src="images/cell.jpg"  alt="Cell" style="height: 41px; width: 40px;cursor:pointer;" onclick="show(this, 'cell')"/> 
+                                  </td>
+                                  <td  >
+                                   Cell
+                                   <div class="hover" id="cell" style="display:none;"><div class="text">0747376806</div></div>
+                                  </td>
+                                 </tr>
+                                 <tr>
+                                  <td class="style2" >
+                                   <img src="images/home_phone.jpg" alt="Tell" style="height: 40px; width: 40px;cursor:pointer;" onclick="show(this, 'home')"/>
+                                  </td>
+                                  <td >
+                                  <div class="hover" id="home" style="display:none;"><div class="text">0781335223</div></div>
+                                  Home
+                                  </td>
+                                 </tr>
+                                </table>
+							</li>
+						</ul>
+					</div>
+                       </td>
+                       <td valign ="top" >
+                       <!--Email Addresses-->
+                        <div id="sidebar">
+						<ul>
+							<li>
+                                <table  border ="0">
+                                <tr>
+                                 <td colspan="2" style ="font-size:large">
+                                  <h1>Emails</h1>
+                                 </td>
+                                </tr>
+                                 <tr>
+                                  <td class="style2" >
+                                   <img src="images/gmail.jpg" alt="Gmail" style="height: 41px; width:40px;cursor:pointer;" onclick="show(this, 'gmail')"/> 
+                                  </td>
+                                  <td >
+                                      Gmail
+                                      <div class="hover" id="gmail" style="display:none;">swelihle.memela@gmail.com</div>
+                                   </td>
+                                 </tr>
+                                 <tr>
+                                  <td class="style2" >
+                                   <img src="images/vodamail.jpg" alt="vodacom" style="height: 40px; width: 40px; cursor:pointer;" onclick="show(this, 'live')"/>
+                                  </td>
+                                  <td >
+                                   Outlook(live)
+                                   <div class="hover" id="live" style="display:none;">swelihle.memela@live.co.za</div>
+                                  </td>
+                                 </tr>
+                                </table>
+							</li>
+						</ul>
+					</div>
+                       </td>
+                       <!--Acounts-->
+                       <td valign ="top">
+                        <div id="sidebar">
+						<ul>
+							<li>
+                                <table>
+                                <tr>
+                                 <td colspan ="2" style ="font-size:large">
+                                  <h1>Acounts</h1>
+                                 </td>
+                                </tr>
+                                 <tr>
+                                  <td class="style3" >
+                                   <a href="javascript:void(window.open('http://www.myspace.com/Modules/PostTo/Pages/?u='+encodeURIComponent(document.location.toString()),'ptm','height=450,width=550').focus())">
+                                   <img src="images/myspace.jpg" border="0" alt="Share on Myspace" style="height: 34px; width: 36px" /></a>
+                                  </td>
+                                  <td>
+                                   My Space
+                                  </td>
+                                 </tr>
+                                 <tr>
+                                  <td class="style3" >
+                                   <a href ="http://www.facebook.com/"><img src="images/facebook.jpg" alt="" style="height: 34px; width: 36px" /></a> 
+                                  </td>
+                                  <td >
+                                   Facebook
+                                  </td>
+                                 </tr>
+                                 <tr>
+                                  <td class="style3" >
+                                   <a href ="http://www.skype.com/home"><img src="images/twitter.jpg" alt="" style="height: 34px; width: 36px"  /></a>
+                                  </td>
+                                  <td >
+                                   Twitter
+                                  </td>
+                                 </tr>
+                                 <tr>
+                                  <td class="style3" >
+                                   <a href ="http://www.skype.com/home"><img src="images/skype.jpg" alt="" style="height: 34px; width: 36px"  /></a>
+                                  </td>
+                                  <td >
+                                   Skype
+                                  </td>
+                                 </tr>
+                                </table>
+							</li>
+						</ul>
+					</div>
+                       </td>
+                      </tr>
+                     </table>
+                    </div>  
+					</div>
+					<!-- end #content -->
+				</div>
+				<div style="clear: both;">&nbsp;<div id="footer">
+	<p>Copyright (c) 2012 <a href="https://plus.google.com/u/0/107635179288328390161/posts">Swelihle Memela</a>. All rights reserved.</p>
+</div>
+                </div>
+			</div>
+		</div>
+	</div>
+	<!-- end #page -->
+</div>
+<!-- end #footer -->
+</body>
+</html>

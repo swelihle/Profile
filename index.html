@@ -1,0 +1,226 @@
+﻿<!DOCTYPE>
+<html>
+<head>
+<meta name="keywords" content="Swelihle Memela" />
+<meta name="description" content="Swelihle Memela Profile Site" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="title" content="Swelihle Memela" />
+<link rel="image_src" href="images/m2.jpg" />
+
+<title>Swelihle Memela</title>
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="quick_nav.css" rel="Stylesheet" type="text/css" />
+<link rel="shortcut icon" href="home_icon.ico"/>
+<link rel="icon" type="image/ico" href="favicon.ico"/>
+<style type="text/css">
+    .style2
+        {
+            width: 229px;
+        }
+        #TextArea1
+        {
+            height: 117px;
+            width: 271px;
+        }
+        #totop
+        {
+    /*background-image: url(Images/HeaderGlassBlack.jpg);*/
+    background-position: center;
+    background-repeat: repeat-x;
+    background-color: #000;
+    height: 25px;
+    clear: right;
+    text-align: left;
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    display:none;
+        }
+        #totop ul
+        {
+            list-style:none;
+            list-style-type:none;
+        }
+</style>
+<script language="javascript">
+    function toggle() {
+        var top = document.getElementById("totop");
+            var ele = document.getElementById("toggleText");
+			var arw = document.getElementById("navarrow");
+            //var text = document.getElementById("displayText");
+            if (ele.style.display == "block") {
+                ele.style.display = "none";
+                arw.innerHTML = "&#9662";
+
+                top.style.display = "none";
+            }
+            else {
+				ele.style.transition = "height 1s linear 0s";
+                ele.style.display = "block";
+                arw.innerHTML = "&#9652";
+
+                top.style.display = "block";
+            }
+}
+function toggleCV(id) {
+            var ele = document.getElementById("cv");
+            var text = document.getElementById("toggleCV");
+            if (ele.style.display == "block"){
+			
+                ele.style.display = "none";
+			}else {
+                ele.style.display = "block";
+
+            }
+}
+function autoResize(id) {
+            var newheight;
+            var newwidth;
+
+            if (document.getElementById) {
+                newheight = document.getElementById(id).contentWindow.document.body.scrollHeight;
+                newwidth = document.getElementById(id).contentWindow.document.body.scrollWidth;
+            }
+
+            document.getElementById(id).height = (newheight) + "px";
+            document.getElementById(id).width = (newwidth) + "px";
+}
+//-- Smooth scroll ---------------------------------------
+var scrollY = 0;
+var distance = 30;
+var speed = 24;	
+var isScrolled = false;	
+function scrollToPosition() {
+	isScrolled = true;
+	var currentY = window.pageYOffset;
+	var targetY = document.getElementById("toggleCV").offsetTop;
+	var bodyHeight = document.body.offsetHeight;
+	var yPos = currentY + window.innerHeight;
+	var animator = setTimeout('scrollToPosition()', speed);
+	if(yPos > bodyHeight) {
+		clearTimeout(animator);
+	} else {
+		if(currentY < targetY - distance) {
+			scrollY = currentY + distance;
+			window.scroll(0, scrollY);
+		} else {
+			clearTimeout(animator);
+		}
+	}
+}
+
+function scrollToBack() {
+	isScrolled = false;
+	var currentY = window.pageYOffset;
+	var animator = setTimeout('scrollToBack()', speed);
+	scrollY -= distance;
+	window.scroll(0, scrollY);
+	if(currentY == 0) {
+		clearTimeout(animator);
+		toggle();
+	}
+}
+
+/*function scrollToBack() {
+	isScrolled = false;
+	var currentY = window.pageYOffset;
+	var targetY = document.getElementById("toggleCV").offsetTop;
+	var animator = setTimeout('scrollToBack()', speed);
+	if(currentY > targetY) {
+		scrollY = currentY - distance;
+		window.scroll(0, scrollY);
+	} else {
+			clearTimeout(animator);
+	}
+}*/
+
+function viewCV() {
+	if(!isScrolled) {
+		toggle();
+		scrollToPosition();
+	} else {
+		scrollToBack();
+	}
+}
+//-- End Smooth scroll ---------------------------------------
+         
+</script>
+</head>
+<body>
+<div id="wrapper">
+	<div id="page">
+		<div id="page-bgtop">
+			<div id="page-bgbtm">
+				<div id="page-content">
+					<div id="menu-wrapper">
+						<div id="menu">
+							<ul>
+								<li class="current_page_item"><a href="index.html">Homepage</a></li>
+								<li><a href="Entertainment/Entertainment.html">Entertainment</a></li>
+								<li><a href="contacts.html">Contacts</a></li>
+							</ul>
+						</div>
+					</div>
+					<!-- end #menu -->
+					<div id="banner" style ="clear :right "><hr />
+                     <table id="btable" border ="0" cellpadding ="0" cellspacing ="3" width ="100%">
+                      <colgroup >
+                       <col />
+                       <col style="width :200px;"/>
+                       <col />
+                      </colgroup>
+                      <tr ><td rowspan ="7" class="style2"><img src="images/tSwe.jpg" width="200" height="200" alt="Swelihle Memela (Pic)" style="box-shadow:0px 0px 0px 3px #000; border-radius: 5px;"/></td></tr>
+                      <tr ><td >&nbsp;</td><td >&nbsp;<hr /></td></tr>
+                      <tr ><td id="fname">NAME: </td><td id="lname">Swelihle H. Memela<hr /></td></tr>
+                      <tr ><td id="stud">CELL:</td><td id="studn">0747376806<hr /></td></tr>
+                      <tr >
+                        <td id="subject" style="vertical-align:text-top">COURSE:</td>
+                        <td id="subjectn">
+                          ND: IT<br/>
+                          Btech: IT<hr/>
+                        </td>
+                      </tr>
+                      <tr ><td id="paddress" style="vertical-align:text-top">PHYSICAL ADDRESS:</td>
+                           <td >
+                             <div id="texarea" style ="clear :right ">
+                             82 Emaplazini <br/>
+                             INANDA <br/>
+                             4310
+                           </div>
+                          <hr /></td></tr>
+                     </table> 
+                    </div>
+                    <div  id="quik_nav" style ="border:1; clear :right ">
+                     <ul>
+                      <!--<li><a id="displayText" href="javascript:toggle();"> Videos</a></li>-->
+                      <li><a id="toggleCV" href="#" onClick="return false;" onMouseDown="viewCV();" title="Tip: [firefox] click fullscrean then press Esc">Resume(CV)<span id="navarrow">&#9662;</span></a></li>
+                     </ul>
+                    </div>
+                    
+                    <!--TOGGLE VEDIOS-->
+                     <div id="toggleText" style="display: none;overflow:hidden;">
+                       <div id="pdf" style="height:auto;">
+                         <object width="900" height="1160" type="application/pdf" data="documents/tSweCV2 2014.pdf?#zoom=100&scrollbar=0&toolbar=0&navpanes=0" id="pdf_content">
+                         <p>Sorry the PDF cannot be displayed. <a href="documents/tSweCV2 2014.pdf" title="PDF document(CV)">Click her for direct download</a></p>
+                         </object>
+                       </div>
+                     </div>
+                     <div  id="totop" style ="border:1; clear :right ">
+                     <ul>
+                      <!--<li><a id="displayText" href="javascript:toggle();"> Videos</a></li>-->
+                      <li><a id="toggleCV" href="#" onClick="return false;" onMouseDown="viewCV();" title="Tip: [firefox] click fullscrean then press Esc">Back Top<span id="navarrow">&#9662;</span></a></li>
+                     </ul>
+                    </div> 
+				</div>
+				<div style="clear: both;">&nbsp;</div>
+			</div>
+		</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer">
+	<p>Copyright (c) 2012 <a href="https://plus.google.com/u/0/107635179288328390161/posts" target="_top">Swelihle Memela</a>. All rights reserved.</p>
+</div>
+<!-- end #footer -->
+</body>
+</html>
